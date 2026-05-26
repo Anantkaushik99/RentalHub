@@ -1,12 +1,18 @@
 const express = require('express')
 const cors = require('cors')
 const dotenv = require('dotenv')
+const mongoose = require('mongoose')
 
 dotenv.config()
 
 const app = express()
 app.use(cors())
 app.use(express.json())
+
+// MongoDB Connect
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB Connected!'))
+  .catch((err) => console.log('MongoDB Error:', err))
 
 app.get('/', (req, res) => {
   res.json({ message: 'RentalHub API is running!' })
