@@ -16,6 +16,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/properties', require('./routes/property'))
+app.use('/api/reviews', require('./routes/review'))
 app.get('/', (req, res) => {
   res.json({ message: 'RentalHub API is running!' })
 })
