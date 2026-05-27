@@ -7,6 +7,7 @@ function Navbar() {
       <Link to="/listings" style={{ color: 'white', textDecoration: 'none' }}>Listings</Link>
       <Link to="/login" style={{ color: 'white', textDecoration: 'none' }}>Login</Link>
       <Link to="/register" style={{ color: 'white', textDecoration: 'none' }}>Register</Link>
+      <Link to="/add-property" style={{ color: '#4ade80', textDecoration: 'none' }}>+ Add Property</Link>
     </nav>
   )
 }

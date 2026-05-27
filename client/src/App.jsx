@@ -6,6 +6,7 @@ import Listings from './pages/Listings'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import PropertyDetail from './pages/PropertyDetail'
+import AddProperty from './pages/AddProperty'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/property/:id" element={<PropertyDetail />} />
+        <Route path="/add-property" element={<AddProperty />} />
       </Routes>
     </BrowserRouter>
   )
