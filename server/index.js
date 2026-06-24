@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => console.log('MongoDB Error:', err))
 
 app.use('/api/auth', require('./routes/auth'))
-app.use('/api/properties', require('./routes/property'))
+app.use('/api/properties', require('./routes/Property'))
 app.use('/api/reviews', require('./routes/review'))
 app.get('/', (req, res) => {
   res.json({ message: 'RentalHub API is running!' })
