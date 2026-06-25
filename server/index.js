@@ -6,7 +6,10 @@ const mongoose = require('mongoose')
 dotenv.config()
 
 const app = express()
-app.use(cors())
+app.use(cors({
+  origin: ['https://rental-hub-eight.vercel.app', 'http://localhost:5173'],
+  credentials: true
+}))
 app.use(express.json())
 
 // MongoDB Connect
